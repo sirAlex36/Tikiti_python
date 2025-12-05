@@ -1,4 +1,6 @@
-import sqlite3
+from sqlalchemy.orm import declarative_base
 
-CONN = sqlite3.connect('company.db')
-CURSOR = CONN.cursor()
+
+from .model_1 import User, Event, Ticket, Base
+
+__all__ =[User, Event, Ticket, Base]
